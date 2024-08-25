@@ -12,11 +12,12 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://<your-app-name>.herokuapp.com/bfhl', {
+      const response = await fetch('https://bajaj-backend-0mus.onrender.com/bfhl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: jsonInput
       });
+
       const result = await response.json();
       setResponse(result);
     } catch (error) {
